@@ -1,11 +1,12 @@
 # OpenAIPot
+[![MITRE Engage](https://img.shields.io/badge/MITRE%20Engage-Deceive%20%7C%20Detect%20%7C%20Affect-0088cc)](https://engage.mitre.org/)
 
 A deceptive OpenAI API gateway that acts as a honeypot for detecting unauthorized API usage. Similar to an SSH honeypot, OpenAIPot allows you to identify when attackers are using compromised or lure API keys, and can take various actions in response.
 
-[![MITRE Engage](https://img.shields.io/badge/MITRE%20Engage-Deceive%20%7C%20Detect-blue)](https://engage.mitre.org/)
+## How it works
+![image](https://github.com/user-attachments/assets/4fbae1d0-93af-4889-9cfd-548de8c3060d)
 
 ## Features
-
 - **API Key Classification**:
   - Forward legitimate requests with valid API keys
   - Return proper error messages for invalid keys
