@@ -1,0 +1,17 @@
+[Unit]
+Description=OpenAI API Deception Tool
+After=network.target
+
+[Service]
+User=llmgw
+Group=llmgw
+WorkingDirectory=/opt/openaipot
+ExecStart=/opt/openaipot/openaipot
+Restart=on-failure
+# Restart service after 10 seconds if service crashes
+RestartSec=10
+# Set environment variables if needed
+# Environment=VAR=value
+
+[Install]
+WantedBy=multi-user.target

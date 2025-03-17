@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  openaipot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: openaipot
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config.yaml:/app/config.yaml
+      - ./logs:/var/log/openaipot
+    restart: unless-stopped
+    networks:
+      - openaipot-network
+    environment:
+      - DEBUG=true
+      - LOG_LEVEL=debug
+
+networks:
+  openaipot-network:
+    driver: bridge
